@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*ovenstående oftest brugt som standard CSS*/
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    padding-bottom: 5em;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    /* fordi den 'klapper sammen' i bredden når vi bruger 'position' */
+    background-color: #eeeeee;
+    z-index: 11;
+}
+
+#burger {
+    display: none;
+}
+
+nav {
+    max-width: 1000px;
+    /* width istedet for max-width gør at margin i siderne bevares */
+    margin: 0 auto;
+    /* display: flex; */
+    /*     justify-content: space-between;
+ */
+    /* background-color: black; */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 5.375em;
+    /* 86px/16px = 5.375 (højden er 86px i Figma'en og vi omregner til em og 1em = 16px) */
+    list-style: none;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li:first-child {
+    flex: 2;
+}
+
+.logo {
+    max-width: 149px;
+}
+
+nav ul li:last-child {
+    /* width: 20%;  */
+    text-align: end;
+    flex: 2;
+}
+
+nav ul li {
+    text-align: center;
+    flex: 1;
+}
+
+nav ul:first-child li:hover {
+    -webkit-text-stroke: 1.4px red;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Open sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+/* nav a.active {
+    font-weight: 700;
+} */
+
+.toprow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    padding-top: 125px;
+    padding-bottom: 50px;
+}
+
+figure a {
+    text-decoration: none;
+}
+
+figcaption {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+.Midrow {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 65px;
+    padding-bottom: 28px;
+}
+
+.Midrow div {
+    max-width: 295px;
+}
+
+.Midrow h3 {
+    font-size: 28px;
+    color: #E30613;
+    border-bottom: 1px solid #000;
+}
+
+.Midrow ul {
+    list-style: none;
+}
+
+.Midrow li {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.Midrow a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #000;
+}
+
+.TDF {
+    max-width: 640px;
+    padding-bottom: 20px;
+}
+
+.BigTDF h1 {
+    font-size: 44px;
+    max-width: 640px;
+    padding-bottom: 15px;
+}
+
+.BigTDF p {
+    max-width: 640px;
+    font-size: 24px;
+}
+
+.Regning h2 {
+    font-size: 44px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.Regning p {
+    font-size: 24px;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footercontent {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}

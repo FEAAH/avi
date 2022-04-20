@@ -1,0 +1,184 @@
+#wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    /* width: 100%; */
+}
+
+section img {
+    padding-top: 125px;
+}
+
+.gallery-grid,
+.gallery {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.gallery-grid {
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 38px;
+    padding-bottom: 53px;
+}
+
+.gallery {
+    grid-column: 2/3;
+    grid-template-columns: repeat(1, auto);
+}
+
+.slider {
+    width: 640px;
+    grid-area: 1/1/2/-1;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide--active {
+    display: block;
+    position: relative;
+}
+
+.caption {
+    font-size: 62.5%;
+    line-height: 1.6;
+    align-self: end;
+    width: 14.3em;
+    grid-column: 3/4;
+}
+
+#next,
+#back {
+    grid-area: 1/1/2/-1;
+    font-size: 2.5em;
+    margin: 0.5em;
+    order: 2;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10;
+}
+
+#next {
+    justify-self: end;
+}
+
+#back {
+    justify-self: start;
+}
+
+article {
+    text-align: center;
+}
+
+.top {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: -5em;
+    z-index: 2;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 75px;
+}
+
+h3 {
+    font-size: 18px;
+    color: red;
+    padding-bottom: 10px;
+}
+
+.top p {
+    font-size: 26px;
+}
+
+.top h1 {
+    font-size: 56px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.mid p {
+    font-size: 18px;
+}
+
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 44px;
+    padding-top: 38px;
+}
+
+.map iframe {
+    grid-area: 1/2/2/3;
+}
+
+.mapcaption {
+    max-width: 145px;
+    font-size: 10px;
+    grid-area: 1/1/2/2;
+    align-self: end;
+    justify-self: end;
+}
+
+.sec h2,
+.sec p {
+    text-align: left;
+    max-width: 480px;
+    padding-bottom: 1em;
+}
+
+.sec p {
+    font-size: 18px;
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.journalist p {
+    font-size: 12px;
+}
+
+
+/* Animation slider */
+
+.left {
+    animation-name: slideLeft;
+}
+
+@keyframes slideLeft {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.right {
+    animation-name: slideRight;
+}
+
+@keyframes slideRight {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+.left,
+.right {
+    animation-duration: 1200ms;
+}
